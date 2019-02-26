@@ -1,0 +1,70 @@
+
+ <!-- <div class="dropdown">
+<select [(ngModel)]="batchsId" name="batchsId" (change)="getClass()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <option value="" class="dropdown-item">Select batch</option>
+  <option *ngFor="let batchs of batch" [value]="batchs.id" class="dropdown-item"> {{batchs.name}}</option>
+</select>
+</div>
+
+<div class="dropdown">
+<select  [(ngModel)]="cclassesId" name="cclassesId" [value]="cclasses" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <option value="" class="dropdown-item">Select class</option>
+  <option *ngFor="let cclasses of cclass" class="dropdown-item"> {{cclasses.cclass_name}} </option>
+</select>
+</div>
+ <select *ngIf="cclass && cclass.length >0"  [(ngModel)]="cclassesId" name="cclassesId" [value]="cclasses">
+    <option value="">Select class</option>
+  <option *ngFor="let cclasses of cclass"> {{cclasses.cclass_name}} </option>
+</select> 
+<br>
+<button   routerLink="student/{{batchsId}}/{{cclassesId}}" >student list</button><br>
+<button   routerLink="teacher/{{batchsId}}/{{cclassesId}" >teacher list</button> --> 
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+
+      <!-- Icon Cards-->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                   
+                    <div class="dropdown" style=" padding:25px 50px;">
+                        <select [(ngModel)]="batchsId" name="batchsId" (change)="getClass()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding:10px 100px;">
+                          
+                          <option value="" class="dropdown-item" style="text-style:bold;">Select Batch</option>
+                          <option *ngFor="let batchs of batch" [value]="batchs.id" class="dropdown-item"> {{batchs.name}}</option>
+                        </select>
+                        </div>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                  <div class="dropdown" style=" padding:25px 50px;">
+                      <select  [(ngModel)]="cclassesId" name="cclassesId" [value]="cclasses" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding:10px 100px;">
+                          <option value="" class="dropdown-item" style="text-style:bold;">Select Class</option>
+                        <option *ngFor="let cclasses of cclass" [value]="cclasses.cclass_id" class="dropdown-item"> {{cclasses.cclass_name}} </option>
+                      </select>
+                      </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row" style=" padding:25px 50px;">
+                  <button  type="button" class="btn btn-primary" routerLink="student/{{batchsId}}/{{cclassesId}}" style=" padding:10px 10px; margin: 0px 10px;"><span class="glyphicon glyphicon-search"></span> Student list</button>
+                  <button  type="button" class="btn btn-primary"  routerLink="teacher/{{batchsId}}/{{cclassesId}}" style=" padding:10px 10px;"><span class="glyphicon glyphicon-search"></span>Teacher list</button>
+              </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>

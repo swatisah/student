@@ -1,0 +1,76 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display. -->
+        <ul class="nav  top-nav"  >
+                <br>
+               <div style="font-weight: bold;font-size:23px; color:white; " >
+                    <img src="assets/img/logo.jpg" alt="logo" class="logo" width="70px" height="60px" > 
+                HOGWARTS MANAGEMENT
+                 
+            </div>
+             </ul>
+        <!-- Top Menu Items -->
+        
+
+       
+       <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+       <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+               <li><br><br><br></li>
+                <li>
+                  <a routerLink="/dashboard/topics" style=" color:white;"><i class="fa fa-fw fa-paper-plane-o"></i> List Batches</a>
+              </li>
+              <li>
+                <a routerLink="/dashboard/addtopics" style=" color:white;"><i class="fa fa-fw fa-paper-plane-o"></i> Add Batch</a>
+            </li>
+
+            <!-- <li>
+                <a  routerLink="/dashboard/students" style=" color:white;"><i class="fa fa-fw fa-paper-plane-o"></i> All Students</a>
+            </li>
+            <li>
+                <a  routerLink="/dashboard/teachers" style=" color:white;"><i class="fa fa-fw fa-paper-plane-o"></i> All Teachers</a>
+            </li> -->
+                <li>
+                    <a href="/dashboard/#" style=" color:white;"><i class="fa fa-fw fa-star"></i>  Profile </a>
+                   
+                </li>
+                <li>
+                    <a href="/dashboard/#" style=" color:white;"><i class="fa fa-fw fa-user-plus"></i>  Settings</a>
+                </li>
+               <li>
+                    <a routerLink="/login" style=" color:white;"><i class="glyphicon glyphicon-lock"></i>  Logout</a>
+              </li>
+               
+                <li>
+                    <a href="/dashboard/#" style=" color:white;"><i class="fa fa-fw fa fa-question-circle"></i> Help</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <br><br><br>
+        <br>
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                  
+                    <app-dropdown></app-dropdown>
+                </div>
+                <div style=" padding:20px 200px 20px 20px;"> <router-outlet></router-outlet></div>
+               
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+  
+</div>

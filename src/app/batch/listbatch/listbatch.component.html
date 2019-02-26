@@ -1,0 +1,37 @@
+
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:450px;color:black; font-weight: bold;font-family:sans-serif;">BATCHES</h3>
+        <br>
+        <ul class="list">
+        
+            <li>
+                <span style=" text-align: center;">ID</span>
+                <span style=" text-align: center;"> Batch Name</span> <span></span><span></span>
+                <span style=" text-align: center;">Classes</span>
+                <span style=" text-align: center;">Edit</span>
+                <span style=" text-align: center;">Delete</span>
+                <span></span>
+            </li>
+            <li *ngFor="let batchs of batch">
+                <span style=" text-align: center;">{{batchs.id}}</span>
+                <span style=" text-align: center;">{{batchs.name}}</span><span></span><span></span>
+                <span style=" text-align: center; padding: 0px 0px 0px 180px;" routerLink="/dashboard/cclass/{{batchs.id}}" ><span class="glyphicon glyphicon-eye-open"></span></span>
+                <span style=" text-align: center;padding: 0px 0px 0px 40px;" routerLink="/dashboard/addtopics/{{batchs.id}}"><span class="glyphicon glyphicon-pencil"></span></span>
+                <span style=" text-align: center;padding: 0px 0px 0px 50px;" (click)="dashboard/deleteBatch(batchs.id)"> <span class="glyphicon glyphicon-trash"></span> </span><span></span>
+                
+            </li>
+           
+
+            
+            
+        </ul>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,72 @@
+<br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:450px;color:black; font-weight: bold;font-family:sans-serif;">ADD STUDENT</h3>
+        <br>
+        <ul class="list">
+        
+            <li>
+                <form>
+                    <div class="form-group">
+                      <label for="student_id">ID:</label>
+                      <input type="student_id" [(ngModel)]="student.student_id" placeholder="ID" name="student_id" class="form-control" id="student_id">
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="student_fname">First Name:</label>
+                      <input [(ngModel)]="student.student_fname" placeholder="First Name" name="student_fname" class="form-control" id="student_fname">
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="student_lname">last Name:</label>
+                      <input [(ngModel)]="student.student_lname" placeholder="last Name" name="student_lname" class="form-control" id="student_lname">
+                    </div>
+                    <div class="form-group">
+                      <label for="student_email">email:</label>
+                      <input [(ngModel)]="student.student_email" placeholder="email" name="student_email" class="form-control" id="student_email">
+                    </div>
+                  
+                    <button *ngIf="!stId" class="btn btn-success" (click)="addStudent()">Add</button>
+                    <button *ngIf="stId" class="btn btn-success" (click)="updateStudent()">Update</button>
+                  </form>
+            </li>
+           
+           
+
+            
+            
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- <div class="col-md-6">
+  <h2 class="text-center">Add Student</h2>
+<form>
+  <div class="form-group">
+    <label for="student_id">ID:</label>
+    <input type="student_id" [(ngModel)]="student.student_id" placeholder="ID" name="student_id" class="form-control" id="student_id">
+  </div>
+
+  <div class="form-group">
+    <label for="student_fname">First Name:</label>
+    <input [(ngModel)]="student.student_fname" placeholder="First Name" name="student_fname" class="form-control" id="student_fname">
+  </div>
+
+  <div class="form-group">
+    <label for="student_lname">last Name:</label>
+    <input [(ngModel)]="student.student_lname" placeholder="last Name" name="student_lname" class="form-control" id="student_lname">
+  </div>
+  <div class="form-group">
+    <label for="student_email">email:</label>
+    <input [(ngModel)]="student.student_email" placeholder="email" name="student_email" class="form-control" id="student_email">
+  </div>
+
+  <button *ngIf="!cruntId" class="btn btn-success" (click)="addStudent()">Create</button>
+  <button *ngIf="cruntId" class="btn btn-success" (click)="updateStudent()">Update</button>
+</form>
+</div> -->

@@ -1,0 +1,60 @@
+
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:450px;color:black; font-weight: bold;font-family:sans-serif;">ADD BATCH</h3>
+        <br>
+        <ul class="list">
+        
+            <li>
+                <form>
+                    <div class="form-group">
+                      <label for="id">ID:</label>
+                      <input type="id" [(ngModel)]="batch.id" placeholder="ID" name="id" class="form-control" id="id">
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="name"> Name:</label>
+                      <input [(ngModel)]="batch.name" placeholder=" Name" name="name" class="form-control" id="name">
+                    </div>
+                   
+                  
+                    <button  *ngIf="!cruntId" class="btn btn-success" (click)="addBatch()">Add</button>
+                     <button *ngIf="cruntId" class="btn btn-success" (click)="updateBatch()">Update</button>
+                  </form>
+            </li>
+           
+           
+
+            
+            
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- <h2>Add batch</h2>
+<div class="col-md-6">
+ <br>
+<form>
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="id" [(ngModel)]="batch.id" placeholder="ID" name="id" class="form-control" id="id">
+  </div>
+
+  <div class="form-group">
+    <label for="name"> Name:</label>
+    <input [(ngModel)]="batch.name" placeholder=" Name" name="name" class="form-control" id="name">
+  </div>
+ 
+
+  <button  *ngIf="!cruntId" class="btn btn-success" (click)="addBatch()">Create</button>
+   <button *ngIf="cruntId" class="btn btn-success" (click)="updateBatch()">Update</button>
+</form>
+</div> -->

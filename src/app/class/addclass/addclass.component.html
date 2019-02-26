@@ -1,0 +1,57 @@
+<br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:450px;color:black; font-weight: bold;font-family:sans-serif;">ADD CLASS</h3>
+        <br>
+        <ul class="list">
+        
+            <li>
+                <form>
+                    <div class="form-group">
+                      <label for="cclass_id">ID:</label>
+                      <input type="cclass_id" [(ngModel)]="cclass.cclass_id" placeholder="ID" name="cclass_id" class="form-control" id="cclass_id">
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="cclass_name"> Name:</label>
+                      <input [(ngModel)]="cclass.cclass_name" placeholder=" Name" name="name" class="form-control" id="name">
+                    </div>
+                   
+                  
+                    <button *ngIf="top_id" class="btn btn-success" (click)="addCclass()">Add</button>
+                     <button *ngIf="!top_id" class="btn btn-success" (click)="updateCclass()">Update</button> 
+                  </form>
+            </li>
+           
+           
+
+            
+            
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- <div class="col-md-6">
+  <h2 class="text-center">Add Class</h2>
+<form>
+  <div class="form-group">
+    <label for="cclass_id">ID:</label>
+    <input type="cclass_id" [(ngModel)]="cclass.cclass_id" placeholder="ID" name="cclass_id" class="form-control" id="cclass_id">
+  </div>
+
+  <div class="form-group">
+    <label for="cclass_name"> Name:</label>
+    <input [(ngModel)]="cclass.cclass_name" placeholder=" Name" name="name" class="form-control" id="name">
+  </div>
+ 
+
+  <button *ngIf="!top_id" class="btn btn-success" (click)="addCclass()">Create</button>
+  <button *ngIf="top_id" class="btn btn-success" (click)="updateCclass()">Update</button>
+</form>
+</div> -->

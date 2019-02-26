@@ -1,0 +1,79 @@
+
+<!------ Include the above in your HEAD tag ---------->
+<br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:420px;color:black; font-weight: bold;font-family:sans-serif;">TEACHERS DETAILS<button class="btn btn-info btn-sm"  routerLink="/dashboard/addTeach/{{topId}}/{{classId}}" style="margin-left: 180px;"> <span class="glyphicon glyphicon-plus"></span> Add Teacher</button>
+        <button class="btn btn-info btn-sm" (click)="export()" style="margin-left: 5px;" > <span class="glyphicon glyphicon-download-alt"></span> Export </button>
+    </h3>
+        <br>
+    
+<br>
+        <ul class="list">
+        
+            <li>
+                <span style=" text-align: center;">ID</span>
+                <span style=" text-align: center;"> First Name</span> 
+                <span style=" text-align: center;"> Last Name</span> 
+                <span style=" text-align: center;"> Email</span> 
+               
+                <span style=" text-align: center;">Edit</span>
+                <span style=" text-align: center;">Delete</span>
+                
+            </li>
+            <li *ngFor="let teachers of teacher">
+                <td class="hidden"></td>
+                <span style=" text-align: left;padding: 10px 40px;">{{teachers.teacher_id}}</span>
+                <span style=" text-align: center;padding: 10px 100px;">{{teachers.teacher_fname}}</span>
+                <span style=" text-align: left;padding: 10px 50px;">{{teachers.teacher_lname}}</span>
+                <span style=" text-align: center;padding: 10px 50px;">{{teachers.teacher_email}}</span>
+                <span style=" text-align: center;padding: 10px 50px;"   routerLink="/dashboard/addTeachUpdate/{{topId}}/{{classId}}/{{teachers.teacher_id}}" ><span class="glyphicon glyphicon-pencil"></span></span>
+                <span style=" text-align: center;padding: 10px 50px;" (click)="dashboard/deleteTeacher(teachers.teacher_id)"> <span class="glyphicon glyphicon-trash"></span> </span>
+ 
+            </li>
+
+            
+            
+        </ul>
+
+    </div>
+ <br><br><br>
+    <input type="file" class="upload" (change)="changeListener($event.target.files)" style="padding-left:420px;color:black; font-weight: bold;font-family:sans-serif;">
+</div>
+
+
+
+
+
+<!-- <div class="col-md-6">
+  <h2> Teacher Details </h2>
+  
+  <table class="table table-striped">
+    <thead style="background-color: #4CAF50;color: white;">
+    <tr>
+      <th class="hidden"></th>
+      <th style=" text-align: left;padding: 10px 40px;"> sno </th>
+       <th style=" text-align: left;padding: 10px 100px;"> fname</th> 
+         <th style=" text-align: left;padding: 10px 50px;">lname</th> 
+         <th style=" text-align: left;padding: 10px 50px;"> email </th>
+         <th style=" text-align: left;padding: 10px 50px;">delete</th>
+         <th style=" text-align: left;padding: 10px 50px;">edit</th>
+     
+    </tr>
+    </thead>
+  
+    <tr *ngFor="let teachers of teacher">
+      <td class="hidden"></td>
+      <td style=" text-align: left;padding: 10px 40px;">{{teachers.teacher_id}}</td>
+      <td style=" text-align: left;padding: 10px 100px;">{{teachers.teacher_fname}}</td>
+      <td style=" text-align: left;padding: 10px 50px;">{{teachers.teacher_lname}}</td>
+      <td style=" text-align: left;padding: 10px 50px;">{{teachers.teacher_email}}</td>
+      <td style=" text-align: left;padding: 10px 50px;"><button class="btn btn-danger btn-sm" (click)="deleteStudent(teachers.teacher_id)"> <span class="glyphicon glyphicon-trash"></span> Trash</button></td>
+       <td style=" text-align: left;padding: 10px 50px;"><button class="btn btn-danger btn-sm"  routerLink="/update/{{teachers.teacher_id}}" ><span class="glyphicon glyphicon-pencil"></span> Edit</button></td>
+    </tr>
+  </tbody>
+  </table>
+  <button class="btn btn-info btn-sm"  routerLink="/add" > <span class="glyphicon glyphicon-plus"></span> Add Teacher</button>
+  </div> -->

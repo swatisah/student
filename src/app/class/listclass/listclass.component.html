@@ -1,0 +1,79 @@
+
+
+<!------ Include the above in your HEAD tag ---------->
+ <br><br><br><br><br><br><br>
+
+<div class="container">
+
+    <div class="listWrap">
+        <h3 style="padding-left:400px;color:black; font-weight: bold;font-family:sans-serif;">CLASSES DETAILS <button class="btn btn-info btn-sm"  routerLink="/dashboard/addcclass/{{cruntId}}" style="margin-left: 320px;" > <span class="glyphicon glyphicon-plus"></span> Add Class</button></h3>
+        <br>
+        <ul class="list">
+        
+            <li>
+                <span style=" text-align: center;">ID</span>
+                <span style=" text-align: center;"> Class Name</span>
+                <span style=" text-align: center;">Students</span>
+                <span style=" text-align: center;">Teachers</span>
+                <span style=" text-align: center;">Edit</span>
+                <span style=" text-align: center;">Delete</span>
+                
+            </li>
+            <li *ngFor="let cclasses of cclass">
+      <td class="hidden"></td>
+      <span style=" text-align: left;padding: 10px 20px;">{{cclasses.cclass_id}}</span>
+      <span style=" text-align: center;padding: 10px 100px;">{{cclasses.cclass_name}}</span>
+      
+      <span style=" text-align: center;padding: 10px 60px;"  routerLink="/dashboard/student/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-eye-open"></span> </span>
+      <span style=" text-align: center;padding: 10px 100px;"  routerLink="/dashboard/teacher/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-eye-open"></span> </span>
+     
+       <span style=" text-align: center;padding: 10px 60px;"  routerLink="/dashboard/update/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-pencil"></span> </span>
+       <span style=" text-align: center;padding: 10px 60px;" (click)="dashboard/deleteCclass(cclasses.cclass_id)"> <span class="glyphicon glyphicon-trash"></span> </span>
+            </li>
+           
+
+            
+            
+        </ul>
+
+    </div>
+
+</div> 
+
+
+
+<!-- 
+ 
+<div class="col-md-6">
+  <h2> Classes  </h2>
+ 
+  <table class="table table-striped">
+    <thead style="background-color: #4CAF50;color: white;">
+    <tr>
+      <th class="hidden"></th>
+      <th style=" text-align: left;padding: 10px 20px;"> s.no </th>
+       <th style=" text-align: left;padding: 10px 100px;"> Name</th>
+      
+       <th style=" text-align: left;padding: 10px 60px;">students</th> 
+       <th style=" text-align: left;padding: 10px 60px;"> teachers </th>
+         <th style=" text-align: left;padding: 10px 60px;">delete</th> 
+         <th style=" text-align: left;padding: 10px 60px;"> edit </th>
+      
+    </tr>
+    </thead>
+  
+    <tr *ngFor="let cclasses of cclass">
+      <td class="hidden"></td>
+      <td style=" text-align: left;padding: 10px 20px;">{{cclasses.cclass_id}}</td>
+      <td style=" text-align: left;padding: 10px 100px;">{{cclasses.cclass_name}}</td>
+      
+      <td style=" text-align: left;padding: 10px 60px;"><button class="btn btn-info btn-sm"  routerLink="/dashboard/student/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-eye-open"></span> View</button></td>
+      <td style=" text-align: left;padding: 10px 60px;"><button class="btn btn-info btn-sm"  routerLink="/dashboard/teacher/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-eye-open"></span> View</button></td>
+      <td style=" text-align: left;padding: 10px 60px;"><button class="btn btn-danger btn-sm" (click)="deleteCclass(cclasses.cclass_id)"> <span class="glyphicon glyphicon-trash"></span> Trash</button></td>
+       <td style=" text-align: left;padding: 10px 60px;"><button class="btn btn-danger btn-sm"  routerLink="dashboard/addcclass/{{cruntId}}/{{cclasses.cclass_id}}" ><span class="glyphicon glyphicon-pencil"></span> Edit</button></td>
+      
+    </tr>
+  </tbody>
+  </table>
+  <button class="btn btn-info btn-sm"  routerLink="/addcclass" > <span class="glyphicon glyphicon-plus"></span> Add Class</button>
+  </div>  -->
